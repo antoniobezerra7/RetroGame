@@ -9,9 +9,9 @@ Nessa atividade,vamos evoluir o projeto para que a home-page funcione bem tanto 
 
 ## Informações Gerais
 
-- Nome:
-- Matricula:
-- Proposta de projeto escolhida:
+- Nome: Antônio De Andrade Bezerra
+- Matricula: 925591
+- Proposta de projeto escolhida: Vagas de emprego
 - Breve descrição sobre seu projeto:
 
 ## Print da versão responsiva com CSS puro
