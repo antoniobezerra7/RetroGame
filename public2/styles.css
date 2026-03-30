@@ -1,174 +1,176 @@
-/* reset simples - tira os espaços padrões do navegador */
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-/* corpo da página */
 body {
-    font-family: Arial, sans-serif; /* fonte padrão simples */
-    background-color: #0a0f1a; /* fundo escuro estilo gamer */
-    color: #e0e0e0; /* texto claro pra contrastar */
+    font-family: Arial, sans-serif;
+    background-color: #0a0f1a;
+    color: #e0e0e0;
 }
 
-/* HEADER - parte de cima do site */
+/* HEADER */
 .site-header {
-    background-color: #101520; /* fundo um pouco mais claro que o body */
-    padding: 20px; /* espaço interno */
+    background-color: #101520;
+    padding: 20px;
 }
 
-/* título principal */
 .site-title {
     color: white;
-    font-size: 26px;
+    font-size: 28px;
 }
 
-/* parte do nome com cor diferente (tipo destaque) */
 .site-title span {
     color: #3a86ff;
 }
 
-/* subtítulo pequeno abaixo do título */
 .tagline {
     font-size: 12px;
     color: #aaa;
     margin-top: 5px;
 }
 
-/* MENU */
+.main-nav {
+    margin-top: 15px;
+}
 
-/* tira as bolinhas da lista e dá um espaço */
-.main-nav ul {
+.nav-menu {
     list-style: none;
-    margin-top: 10px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
-/* deixa os itens do menu lado a lado */
-.main-nav li {
-    display: inline;
-    margin-right: 15px;
-}
-
-/* estilo dos links */
-.main-nav a {
+.nav-menu a {
     color: #e0e0e0;
-    text-decoration: none; /* tira o sublinhado */
+    text-decoration: none;
 }
 
-/* quando passa o mouse muda a cor */
-.main-nav a:hover {
+.nav-menu a:hover {
     color: #3a86ff;
 }
 
-/* MAIN - área principal do site */
+/* MAIN */
 .principal {
-    max-width: 1000px; /* limita o tamanho da página */
-    margin: auto; /* centraliza na tela */
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-/* HERO - imagem principal */
+/* HERO */
+.hero-section {
+    position: relative;
+    margin-bottom: 25px;
+}
 
 .hero-img {
-    width: 100%; /* ocupa toda largura */
+    width: 100%;
+    display: block;
+    border-radius: 10px;
 }
 
-/* texto que fica junto da imagem */
 .hero-content {
-    background-color: #000; /* fundo preto pra destacar */
-    padding: 10px;
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 15px;
+    border-radius: 8px;
+    max-width: 500px;
 }
 
-/* título da parte principal */
 .hero-content h2 {
     color: #3a86ff;
+    margin-bottom: 8px;
 }
 
-/* COLEÇÃO */
-
-.colecoes {
-    padding: 20px; /* espaço interno da seção */
+/* SEÇÕES */
+.colecoes,
+.extra-section {
+    padding: 20px 0;
 }
 
-/* título das seções */
 .section-title {
     color: #3a86ff;
     margin-bottom: 20px;
 }
 
-/* CONTAINER DOS CARDS */
-
-/* aqui eu usei flex pra organizar os cards lado a lado */
+/* CARDS */
 .cards-container {
     display: flex;
-    flex-wrap: wrap; /* quebra linha quando não cabe */
-    gap: 15px; /* espaço entre os cards */
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
-/* CARDS (cada jogo) */
 .game-card {
     background-color: #1a1f2a;
-    width: 30%; /* faz caber 3 por linha */
+    width: 300px;
     padding: 10px;
 }
 
-/* IMAGENS PADRONIZADAS */
 .card-img {
     width: 100%;
-    height: 150px; /* altura fixa */
-    object-fit: cover; /* evita distorcer a imagem */
+    height: 150px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 10px;
 }
-
-/* TEXTO DOS CARDS */
 
 .game-title {
     color: #3a86ff;
-    margin-top: 10px;
+    margin-bottom: 8px;
 }
 
 .game-desc {
     font-size: 14px;
-    margin-top: 5px;
+    line-height: 1.5;
+    margin-bottom: 10px;
 }
 
-/* etiqueta tipo "Playstation", "N64" */
 .console-label {
-    display: inline-block; /* permite estilizar tipo botão */
+    display: inline-block;
     background-color: #2c3e66;
-    padding: 3px 8px;
+    padding: 4px 8px;
     font-size: 12px;
-    margin-top: 8px;
 }
 
-/* FORMULÁRIO */
-
-.form-section {
-    background-color: #101520;
-    padding: 20px;
-}
-
-/* espaço entre os campos */
-.form-group {
-    margin-bottom: 15px;
-}
-
-/* campos de input */
-.form-group input {
-    width: 100%; /* ocupa toda largura */
-    padding: 8px;
-}
-
-/* botão */
-.btn-submit {
-    padding: 10px;
-    background-color: #3a86ff;
-    color: white;
-    border: none;
-}
-
-/* FOOTER - rodapé */
+/* FOOTER */
 .site-footer {
     background-color: #080c12;
     text-align: center;
-    padding: 15px;
-    font-size: 14px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-links a {
+    color: #3a86ff;
+    text-decoration: none;
+    margin: 0 8px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .hero-content {
+        position: static;
+        max-width: 100%;
+        margin-top: 10px;
+    }
+
+    .cards-container {
+        flex-direction: column;
+    }
+
+    .game-card {
+        width: 100%;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        gap: 8px;
+    }
 }
