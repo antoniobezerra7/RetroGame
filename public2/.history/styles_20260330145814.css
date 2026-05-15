@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0a0f1a;
+    color: #e0e0e0;
+}
+
+/* HEADER */
+.site-header {
+    background-color: #101520;
+    padding: 20px;
+}
+
+.site-title {
+    color: white;
+    font-size: 28px;
+}
+
+.site-title span {
+    color: #3a86ff;
+}
+
+.tagline {
+    font-size: 12px;
+    color: #aaa;
+    margin-top: 5px;
+}
+
+.main-nav {
+    margin-top: 15px;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.nav-menu a {
+    color: #e0e0e0;
+    text-decoration: none;
+}
+
+.nav-menu a:hover {
+    color: #3a86ff;
+}
+
+/* MAIN */
+.principal {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* HERO */
+.hero-section {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.hero-img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+
+.hero-content {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 15px;
+    border-radius: 8px;
+    max-width: 500px;
+}
+
+.hero-content h2 {
+    color: #3a86ff;
+    margin-bottom: 8px;
+}
+
+/* SEÇÕES */
+.colecoes,
+.extra-section {
+    padding: 20px 0;
+}
+
+.section-title {
+    color: #3a86ff;
+    margin-bottom: 20px;
+}
+
+/* CARDS */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.game-card {
+    background-color: #1a1f2a;
+    width: 300px;
+    padding: 10px;
+}
+
+.card-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.game-title {
+    color: #3a86ff;
+    margin-bottom: 8px;
+}
+
+.game-desc {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.console-label {
+    display: inline-block;
+    background-color: #2c3e66;
+    padding: 4px 8px;
+    font-size: 12px;
+}
+
+/* FOOTER */
+.site-footer {
+    background-color: #080c12;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-links a {
+    color: #3a86ff;
+    text-decoration: none;
+    margin: 0 8px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .hero-content {
+        position: static;
+        max-width: 100%;
+        margin-top: 10px;
+    }
+
+    .cards-container {
+        flex-direction: column;
+    }
+
+    .game-card {
+        width: 100%;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        gap: 8px;
+    }
+}

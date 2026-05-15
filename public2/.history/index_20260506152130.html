@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RetroGame · Coleções de Videogames Antigos</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center py-2">
+        <div class="logo-area">
+            <h1 class="site-title">Retro<span>Game</span></h1>
+            <p class="tagline">Coleções de videogames antigos</p>
+        </div>
+
+        <nav class="main-nav">
+            <ul class="nav-menu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="#colecoes">Coleções</a></li>
+                <li><a href="#destaques-slider">Destaques</a></li>
+                <li><a href="#sobre-aluno">Sobre</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="principal container py-4">
+
+    <section id="destaques-slider" class="mb-5">
+        <h2 class="section-title border-start border-4 border-primary ps-3 mb-4">🎮 Itens em Destaque</h2>
+
+        <div id="carouselDestaques" class="carousel slide carousel-fade shadow-lg rounded-4 overflow-hidden" data-bs-ride="carousel">
+            <div class="carousel-indicators" id="carouselIndicators"></div>
+            <div class="carousel-inner" id="carouselInner"></div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselDestaques" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselDestaques" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </section>
+
+    <section id="colecoes" class="mb-5">
+        <h2 class="section-title border-start border-4 border-primary ps-3 mb-4">📀 Todos os jogos da coleção</h2>
+        <div class="row g-4" id="cardsContainer"></div>
+    </section>
+
+    <section id="sobre-aluno" class="sobre-aluno-card p-4 rounded-4 shadow-sm bg-dark-opacity mb-4">
+        <div class="row align-items-center">
+            <div class="col-md-2 text-center">
+                <i class="bi bi-joystick fs-1 text-primary"></i>
+            </div>
+
+            <div class="col-md-10">
+                <h4 class="fw-bold text-primary">👾 Autoria do Projeto</h4>
+                <p class="mb-1"><strong>Aluno(a):</strong> Antônio Bezerra</p>
+                <p class="mb-1"><strong>Curso:</strong> An</p>
+                <p class="mb-0"><strong>Turma:</strong> Manhã</p>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer class="site-footer text-center py-4 mt-4">
+    <div class="container">
+        <p class="mb-0">© 2026 RetroGame</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    initIndexPage();
+});
+</script>
+
+</body>
+</html>
